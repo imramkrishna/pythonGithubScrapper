@@ -1,3 +1,3 @@
 from getData import getData
-a=input("Enter your username : ")
-getData(a)
+username=input("Enter your username : ")
+getData(username)
