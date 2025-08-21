@@ -1,0 +1,22 @@
+import numpy as np
+#arr.shape provides the data about row and column in the martrix like m*n in small brackets like (m.n)
+arr=np.array([[1,2,3,4],[1,5,7,9]])
+print("The shape of array is ",arr.shape)
+print("\n")
+#arr.reshape converts the array into the desired format. In the example below, the newarr is changed to shape of 4,2 from 2,4
+newarr=arr.reshape(4,2)
+print("The shape of new array is ",newarr.shape)
+print(newarr)
+print("\n")
+#you can only convert the array to number of elements it has else it will throw an error for eg initially i have an array arr with 8 elements so i can only convert it to array order m*n or m*n*o or so on where the total number of elements in an array is 8. the order (2,2,2) or (2,4) or (8,1) has 8 elements so it can be converted into those orders
+newarray=arr.reshape(2,2,2)
+newnewarr=arr.reshape(1,8)
+print(newarr)
+print("\n")
+print(newarray.shape)
+print("\n")
+print(newnewarr)
+print("\n")
+print(newnewarr.shape)
+print("\n")
+print(newarr.size)
