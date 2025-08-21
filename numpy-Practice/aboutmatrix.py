@@ -1,117 +1,69 @@
-In a matrix:
+'''
+====================
+Matrix Basics for ML
+====================
 
-Row refers to a horizontal line of elements.
+Definitions:
+-----------
+Scalar: A single number (e.g., 5)
+Vector: A 1D array of numbers (e.g., [1, 2, 3])
+Matrix: A 2D array of numbers (e.g., [[1,2,3],[4,5,6],[7,8,9]])
+Tensor: An n-dimensional array (generalization of matrix)
 
-Column refers to a vertical line of elements.
+Matrix Example:
+---------------
+    [ 1  2  3 ]
+    [ 4  5  6 ]
+    [ 7  8  9 ]
 
-Example Matrix:
-[
-1
-	
-2
-	
-3
+Rows: Horizontal lines (e.g., [1,2,3])
+Columns: Vertical lines (e.g., [1,4,7])
+Size: rows × columns (here, 3 × 3)
 
+Matrix in ML:
+-------------
+- Data is often stored as matrices (rows = samples, columns = features)
+- Images are matrices of pixel values
+- Matrix operations are used in linear regression, neural networks, PCA, etc.
 
-4
-	
-5
-	
-6
+Common Matrix Operations:
+------------------------
+- Addition: element-wise
+- Multiplication: dot product (matrix product)
+- Transpose: swap rows and columns
+- Inverse: only for square matrices
 
+NumPy Matrix Examples:
+---------------------
+import numpy as np
 
-7
-	
-8
-	
-9
-]
-	​
+# Create a matrix
+A = np.array([[1,2,3],[4,5,6],[7,8,9]])
 
-1
-4
-7
-	​
+# Shape
+print("Shape:", A.shape)  # (3, 3)
 
-2
-5
-8
-	​
+# Transpose
+print("Transpose:\n", A.T)
 
-3
-6
-9
-	​
+# Matrix multiplication
+B = np.array([[1,0,0],[0,1,0],[0,0,1]])
+print("A @ B:\n", A @ B)
 
-	​
+# Element-wise addition
+print("A + B:\n", A + B)
 
-In This Example:
+# Access row/column
+print("First row:", A[0])
+print("First column:", A[:,0])
 
-Rows:
+# Inverse (only for invertible matrices)
+C = np.array([[1,2],[3,4]])
+print("Inverse of C:\n", np.linalg.inv(C))
 
-Row 1: 
-[
-1
-,
-2
-,
-3
-]
-[1,2,3]
-
-Row 2: 
-[
-4
-,
-5
-,
-6
-]
-[4,5,6]
-
-Row 3: 
-[
-7
-,
-8
-,
-9
-]
-[7,8,9]
-
-Columns:
-
-Column 1: 
-[
-1
-,
-4
-,
-7
-]
-[1,4,7]
-
-Column 2: 
-[
-2
-,
-5
-,
-8
-]
-[2,5,8]
-
-Column 3: 
-[
-3
-,
-6
-,
-9
-]
-[3,6,9]
-
-Matrix Size:
-
-The size of a matrix is written as rows × columns.
-For the example above, it is a 3 × 3 matrix.
+Further Reading:
+----------------
+- https://numpy.org/doc/stable/user/quickstart.html
+- https://en.wikipedia.org/wiki/Matrix_(mathematics)
+- https://machinelearningmastery.com/linear-algebra-for-machine-learning/
+'''
