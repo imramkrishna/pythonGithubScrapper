@@ -30,6 +30,6 @@ arr2 = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
 #the similar operations can be done without using np.nditer but it will return an array bthis functions directly returns elements
 for x in np.nditer(arr2[:,1:2]): 
     print(x)
-#this functions gives me index as well as element present there in a multiple dimension array
+#this function gives me index as well as element present there in a multiple dimension array
 for index,x in np.ndenumerate(arr2):
     print(index,x)

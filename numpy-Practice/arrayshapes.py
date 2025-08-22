@@ -8,7 +8,7 @@ newarr=arr.reshape(4,2)
 print("The shape of new array is ",newarr.shape)
 print(newarr)
 print("\n")
-#you can only convert the array to number of elements it has else it will throw an error for eg initially i have an array arr with 8 elements so i can only convert it to array order m*n or m*n*o or so on where the total number of elements in an array is 8. the order (2,2,2) or (2,4) or (8,1) has 8 elements so it can be converted into those orders
+#you can only convert the array to number of elements it has (can be calculated using arr.size functions) else it will throw an error for eg initially i have an array arr with 8 elements so i can only convert it to array order m*n or m*n*o or so on where the total number of elements in an array is 8. the order (2,2,2) or (2,4) or (8,1) has 8 elements so it can be converted into those orders
 newarray=arr.reshape(2,2,2)
 newnewarr=arr.reshape(1,8)
 print(newarr)
@@ -19,4 +19,5 @@ print(newnewarr)
 print("\n")
 print(newnewarr.shape)
 print("\n")
+#arr.size returns the number of elements the array has in it.
 print(newarr.size)
